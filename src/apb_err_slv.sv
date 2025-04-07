@@ -46,8 +46,8 @@ endmodule
 `include "apb/assign.svh"
 
 module apb_err_slv_intf #(
-  parameter int unsigned          APB_ADDR_WIDTH = 0,
-  parameter int unsigned          APB_DATA_WIDTH = 0,
+  parameter int unsigned          APB_ADDR_WIDTH = 32,
+  parameter int unsigned          APB_DATA_WIDTH = 32,
   parameter logic [APB_DATA_WIDTH-1:0] RespData  = 32'hBADCAB1E
 ) (
   APB.Slave slv

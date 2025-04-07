@@ -62,8 +62,8 @@ endmodule
 `include "apb/assign.svh"
 
 module apb_demux_intf #(
-  parameter int unsigned APB_ADDR_WIDTH = 0,
-  parameter int unsigned APB_DATA_WIDTH = 0,
+  parameter int unsigned APB_ADDR_WIDTH = 32,
+  parameter int unsigned APB_DATA_WIDTH = 32,
   parameter int unsigned NoMstPorts = 32'd2,
   // DEPENDENT PARAMETERS DO NOT OVERWRITE!
   parameter int unsigned SelectWidth = (NoMstPorts > 32'd1)? $clog2(NoMstPorts) : 32'd1,
